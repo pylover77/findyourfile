@@ -1,6 +1,5 @@
-import os
-import time
-import string
+import os, time, string
+
 # you dont know where you put one specify file? just put the path you want to search on 
 class bcolors:
     GREEN = '\033[92m'
@@ -9,7 +8,7 @@ class bcolors:
 
 class search:
     def search_path(self):
-        self.put = input('Enter the path you want to search:' )
+        self.put = input(bcolors.YELLOW + '[*] Enter the path you want to search:')
         self.dirct = os.chdir(self.put)
         print(bcolors.GREEN + '[+[+[+ Searching +]+]+]')
         time.sleep(3)
